@@ -19,6 +19,16 @@ app.get("/notes", (req, res) => {
 app.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/db/db.json"));
 });
+app.post("/api/notes", (req, res) => {
+  let userNote = {
+    title: req.body.title,
+    text: req.body.text,
+    id: uuidv4(),
+  };
+  db.push(userNote);
+  fs.writeFileSync("db/db.json", JSON.stringify(db));
+  res.json(db);
+});
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
