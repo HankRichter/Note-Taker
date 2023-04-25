@@ -34,6 +34,10 @@ Hank Richter
 
 ## Screenshots:
 
+Sample list item
+
+![Sample list item](./README%20resouces/New%20List%20item.JPG)
+
 ## Questions:
 
 - Github: [HankRichter](https://github.com/HankRichter)
